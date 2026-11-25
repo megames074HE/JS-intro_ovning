@@ -1,18 +1,22 @@
 <!DOCTYPE html>
 <html>
+<head>
+    <meta charset="UTF-8">
+    <title>övning 1</title>
+</head>
 <body>
 
     <h2>JavaScript sist i body</h2>
 
     <p>JavaScript kan ändra innehållet i en HTML-tag</p>
   
-    <p id="demo">Ett stycke</p>
+    <p id="test">Ett stycke</p>
 
     <!-- script-taggen där man lägger JavaScript-kod ska ligga sist i bodyn -->
     <script>
         // document.getElementById("demo") hämtar elementet med id:t demo
         // När document.getElementById("demo").textContent tilldelas ett värde ändras elementets innehåll
-        document.getElementById("demo").textContent = "JavaScript har ändrat texten i stycket!";
+        document.getElementById("test").textContent = "JavaScript har ändrat texten i stycket!";
     </script>
     
 </body>
@@ -35,4 +39,14 @@ När document.getElementById("demo").textContent tilldelas ett värde ändras el
 ÖVNING: Ändra id-attributet på p-taggen från demo till test: <p id="test"></p>.
 Vad behöver du ändra mer för att koden ska fungera?
 ********************************************************
+
+
+Jag har adderat head i html filen med charset för att svenska bokstäver som öäå inte fungerade annars.
+
+svar
+
+för att få koden att funka med p tag id "test" måste javascript också ha samma id.
+om idn i javascript fortfarande är demo söker den efter en attribut med en id som är demo. Den finns inte så inget händer.
+
+
 -->
